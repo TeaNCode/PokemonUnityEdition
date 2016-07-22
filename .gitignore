@@ -3,6 +3,11 @@
 
 ### Unity ###
 #/[Ll]ibrary/
+AtlasCache/
+metadata/
+ScriptAssemblies/
+ShaderCache/
+UnityAssemblies/
 /[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
