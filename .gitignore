@@ -2,12 +2,7 @@
 # Created by https://www.gitignore.io/api/unity,monodevelop,visualstudio,windows,linux,osx
 
 ### Unity ###
-#/[Ll]ibrary/
-AtlasCache/
-metadata/
-ScriptAssemblies/
-ShaderCache/
-UnityAssemblies/
+/[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
