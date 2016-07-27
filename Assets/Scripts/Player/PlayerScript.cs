@@ -7,6 +7,7 @@ public class PlayerScript : MonoBehaviour {
     private int movementStateHash = Animator.StringToHash("MovementState");
     private float movementTimer;
     private Vector3 direction;
+    private CharacterController controller;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +15,7 @@ public class PlayerScript : MonoBehaviour {
         animator.SetFloat(movementStateHash, .3f);
         movementTimer = 0;
         direction = Vector3.zero;
-
+        controller = GetComponent<CharacterController>();
 	}
 	
 	// Update is called once per frame
@@ -22,7 +23,7 @@ public class PlayerScript : MonoBehaviour {
         movementTimer -= Time.deltaTime * 4;
         if(movementTimer > 0)
         {
-            transform.Translate(direction * 4 * Time.deltaTime);
+            controller.Move(direction * 4 * Time.deltaTime);
         }
         else if (movementTimer <= 0f)
         {
@@ -31,7 +32,7 @@ public class PlayerScript : MonoBehaviour {
             {
                 roundLocation();
                 direction = Vector3.up;
-                transform.Translate(direction * 4 * Time.deltaTime);
+                controller.Move(direction * 4 * Time.deltaTime);
                 animator.SetFloat(movementStateHash, 1.1f);
                 movementTimer = 1f;
             }
@@ -39,7 +40,7 @@ public class PlayerScript : MonoBehaviour {
             {
                 roundLocation();
                 direction = Vector3.down;
-                transform.Translate(direction * 4 * Time.deltaTime);
+                controller.Move(direction * 4 * Time.deltaTime);
                 animator.SetFloat(movementStateHash, 1f);
                 movementTimer = 1f;
             }
@@ -47,7 +48,7 @@ public class PlayerScript : MonoBehaviour {
             {
                roundLocation();
                 direction = Vector3.right;
-                transform.Translate(direction * 4 * Time.deltaTime);
+                controller.Move(direction * 4 * Time.deltaTime);
                 animator.SetFloat(movementStateHash, 1.2f);
                 movementTimer = 1f;
             }
@@ -55,7 +56,7 @@ public class PlayerScript : MonoBehaviour {
             {
                 roundLocation();
                 direction = Vector3.left;
-                transform.Translate(direction * 4 * Time.deltaTime);
+                controller.Move(direction * 4 * Time.deltaTime);
                 animator.SetFloat(movementStateHash, 1.3f);
                 movementTimer = 1f;
             }
@@ -72,7 +73,8 @@ public class PlayerScript : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        roundLocation();
+        //roundLocation();
+        //transform.Translate(new Vector3(-transform.position.x, -transform.position.y, 0) * 4 * Time.deltaTime);
     }
 
     private void roundLocation()

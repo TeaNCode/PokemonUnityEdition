@@ -96,8 +96,7 @@ GameObject:
   - 212: {fileID: 471839377}
   - 114: {fileID: 471839379}
   - 95: {fileID: 471839380}
-  - 61: {fileID: 471839381}
-  - 50: {fileID: 471839382}
+  - 143: {fileID: 471839381}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -176,37 +175,23 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!61 &471839381
-BoxCollider2D:
+--- !u!143 &471839381
+CharacterController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 471839376}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.42, y: 0.63}
---- !u!50 &471839382
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 471839376}
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Height: 0.62
+  m_Radius: 0.21
+  m_SlopeLimit: 0
+  m_StepOffset: 0
+  m_SkinWidth: 0.021
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &925682989
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,8 +301,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1371218086}
   - 212: {fileID: 1371218087}
-  - 61: {fileID: 1371218088}
-  - 50: {fileID: 1371218089}
+  - 143: {fileID: 1371218088}
   m_Layer: 0
   m_Name: May- Test Object
   m_TagString: Untagged
@@ -368,34 +352,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!61 &1371218088
-BoxCollider2D:
+--- !u!143 &1371218088
+CharacterController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1371218085}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.42, y: 0.6}
---- !u!50 &1371218089
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1371218085}
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Height: 0.6
+  m_Radius: 0.21
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
