@@ -30,7 +30,7 @@ public class PlayerScript : MonoBehaviour {
             roundLocation();
             if (Input.GetKey(KeyCode.W))
             {
-                roundLocation();
+                //roundLocation();
                 direction = Vector3.up;
                 controller.Move(direction * 4 * Time.deltaTime);
                 animator.SetFloat(movementStateHash, 1.1f);
@@ -38,7 +38,7 @@ public class PlayerScript : MonoBehaviour {
             }
             else if (Input.GetKey(KeyCode.S))
             {
-                roundLocation();
+                //roundLocation();
                 direction = Vector3.down;
                 controller.Move(direction * 4 * Time.deltaTime);
                 animator.SetFloat(movementStateHash, 1f);
@@ -46,7 +46,7 @@ public class PlayerScript : MonoBehaviour {
             }
             else if (Input.GetKey(KeyCode.D))
             {
-               roundLocation();
+                //roundLocation();
                 direction = Vector3.right;
                 controller.Move(direction * 4 * Time.deltaTime);
                 animator.SetFloat(movementStateHash, 1.2f);
@@ -54,7 +54,7 @@ public class PlayerScript : MonoBehaviour {
             }
             else if (Input.GetKey(KeyCode.A))
             {
-                roundLocation();
+                //roundLocation();
                 direction = Vector3.left;
                 controller.Move(direction * 4 * Time.deltaTime);
                 animator.SetFloat(movementStateHash, 1.3f);
