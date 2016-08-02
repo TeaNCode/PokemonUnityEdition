@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 412b781238bc16e40ac366835ab6c0c1
+guid: e36147a52cb182c44838ae1f3db373e9
 timeCreated: 1469118128
 licenseType: Free
 TextureImporter:
@@ -30,7 +30,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -51,7 +51,7 @@ TextureImporter:
   spriteSheet:
     sprites: []
     outline: []
-  spritePackingTag: 
+  spritePackingTag: Brendan
   userData: 
   assetBundleName: 
   assetBundleVariant: 

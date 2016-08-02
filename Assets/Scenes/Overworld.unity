@@ -95,6 +95,8 @@ GameObject:
   - 4: {fileID: 471839378}
   - 212: {fileID: 471839377}
   - 114: {fileID: 471839379}
+  - 95: {fileID: 471839380}
+  - 143: {fileID: 471839381}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -140,7 +142,7 @@ Transform:
   m_GameObject: {fileID: 471839376}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 2, y: 1.6, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -156,6 +158,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99cdd1770a75a8a4da3051fa0ff5d32d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &471839380
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 471839376}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 751f9a9dc994a0f4b930b6036c217f17, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!143 &471839381
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 471839376}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 0.62
+  m_Radius: 0.21
+  m_SlopeLimit: 0
+  m_StepOffset: 0
+  m_SkinWidth: 0.021
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &925682989
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,8 +301,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1371218086}
   - 212: {fileID: 1371218087}
+  - 143: {fileID: 1371218088}
   m_Layer: 0
-  m_Name: Generic Object
+  m_Name: May- Test Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,7 +317,7 @@ Transform:
   m_GameObject: {fileID: 1371218085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 2, y: 1.6, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -315,3 +352,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!143 &1371218088
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1371218085}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 0.6
+  m_Radius: 0.21
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
