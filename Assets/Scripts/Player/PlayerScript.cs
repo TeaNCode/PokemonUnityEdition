@@ -6,75 +6,60 @@ public class PlayerScript : MonoBehaviour {
     private Animator animator;
     private int movementStateHash = Animator.StringToHash("MovementState");
     private float movementTimer;
-    private Vector3 direction;
-    private CharacterController controller;
+    private Rigidbody2D body;
 
 	// Use this for initialization
 	void Start () {
         animator = GetComponent<Animator>();
         animator.SetFloat(movementStateHash, .3f);
         movementTimer = 0;
-        direction = Vector3.zero;
-        controller = GetComponent<CharacterController>();
+        body = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
         movementTimer -= Time.deltaTime * 4;
-        if(movementTimer > 0)
+        if (movementTimer <= 0f)
         {
-            controller.Move(direction * 4 * Time.deltaTime);
-        }
-        else if (movementTimer <= 0f)
-        {
+            float vertical = Input.GetAxis("Vertical");
+            float horizontal = Input.GetAxis("Horizontal");
             roundLocation();
-            if (Input.GetKey(KeyCode.W))
+            if (vertical < 0f)
             {
-                //roundLocation();
-                direction = Vector3.up;
-                controller.Move(direction * 4 * Time.deltaTime);
-                animator.SetFloat(movementStateHash, 1.1f);
-                movementTimer = 1f;
-            }
-            else if (Input.GetKey(KeyCode.S))
-            {
-                //roundLocation();
-                direction = Vector3.down;
-                controller.Move(direction * 4 * Time.deltaTime);
+                body.velocity = new Vector2(0, -4);
                 animator.SetFloat(movementStateHash, 1f);
                 movementTimer = 1f;
             }
-            else if (Input.GetKey(KeyCode.D))
+            else if (horizontal < 0f)
             {
-                //roundLocation();
-                direction = Vector3.right;
-                controller.Move(direction * 4 * Time.deltaTime);
-                animator.SetFloat(movementStateHash, 1.2f);
-                movementTimer = 1f;
-            }
-            else if (Input.GetKey(KeyCode.A))
-            {
-                //roundLocation();
-                direction = Vector3.left;
-                controller.Move(direction * 4 * Time.deltaTime);
+                body.velocity = new Vector2(-4, 0);
                 animator.SetFloat(movementStateHash, 1.3f);
                 movementTimer = 1f;
             }
-            else
+            else if(vertical > 0f)
             {
-                roundLocation();
+                body.velocity = new Vector2(0, 4);
+                animator.SetFloat(movementStateHash, 1.1f);
+                movementTimer = 1f;
+            }
+            else if (horizontal > 0f)
+            {
+                body.velocity = new Vector2(4, 0);
+                animator.SetFloat(movementStateHash, 1.2f);
+                movementTimer = 1f;
+            }
+            else 
+            {
+                if(body.velocity != Vector2.zero)
+                {
+                    body.velocity = Vector2.zero;
+                }
                 if (animator.GetFloat(movementStateHash) >= 1)
                 {
                     animator.SetFloat(movementStateHash, animator.GetFloat(movementStateHash) - 1f);
                 }
             }
         }
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        //roundLocation();
-        //transform.Translate(new Vector3(-transform.position.x, -transform.position.y, 0) * 4 * Time.deltaTime);
     }
 
     private void roundLocation()
