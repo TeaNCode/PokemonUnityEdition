@@ -31,12 +31,40 @@ public class Pokemon
     public byte speedEV;
     //public Item heldItem;
 
-    public static ushort calculateHP(byte species, byte level, byte hPIV, byte hPEV)
+    public static ushort calculateStatistic(Statistic statistic, byte species, byte level, byte IV, byte EV, Nature nature)
     {
         PokemonData speciesData = PokemonBaseDatabase.database[species];
+        ushort stat;
+        byte baseStat;
 
-        ushort hP = (ushort)(((2 * speciesData.baseHP + hPIV + (hPEV / 4f) * level) / 100f) + level + 10);
+        if (statistic == Statistic.HP)
+        {
+             stat = (ushort)(((2 * speciesData.baseHP + IV + (EV / 4f) * level) / 100f) + level + 10);
+            return stat;
+        }
+        else if(statistic == Statistic.Attack)
+        {
+            baseStat = speciesData.baseAttack;
+        }
+        else if(statistic == Statistic.Defense)
+        {
+            baseStat = speciesData.baseDefense;
+        }
+        else if(statistic == Statistic.SpecialAttack)
+        {
+            baseStat = speciesData.baseSpecialAttack;
+        }
+        else if(statistic == Statistic.SpecialDefense)
+        {
+            baseStat = speciesData.baseSpecialDefense;
+        }
+        else
+        {
+            baseStat = speciesData.baseSpeed;
+        }
 
-        return hP;
+        stat = ();
+
+        return stat;
     }
 }

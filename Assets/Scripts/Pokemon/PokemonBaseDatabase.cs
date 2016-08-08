@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public abstract class PokemonBaseDatabase
 {
     public static List<PokemonData> database;
+
     public static void initializeDatabase()
     {
         database = new List<PokemonData>();
