@@ -231,7 +231,7 @@ GameObject:
   - 50: {fileID: 471839381}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -338,6 +338,52 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.42, y: 0.6}
+--- !u!1001 &582458410
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 445702, guid: f3b7641b5f0128040852ff4f6d5f2144, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445702, guid: f3b7641b5f0128040852ff4f6d5f2144, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 445702, guid: f3b7641b5f0128040852ff4f6d5f2144, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1.8242188
+      objectReference: {fileID: 0}
+    - target: {fileID: 445702, guid: f3b7641b5f0128040852ff4f6d5f2144, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445702, guid: f3b7641b5f0128040852ff4f6d5f2144, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445702, guid: f3b7641b5f0128040852ff4f6d5f2144, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445702, guid: f3b7641b5f0128040852ff4f6d5f2144, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445702, guid: f3b7641b5f0128040852ff4f6d5f2144, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085660, guid: f3b7641b5f0128040852ff4f6d5f2144, type: 2}
+      propertyPath: m_SleepingMode
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f3b7641b5f0128040852ff4f6d5f2144, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &781793006
 Prefab:
   m_ObjectHideFlags: 0
