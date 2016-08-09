@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class Pokemon
 {
@@ -33,13 +34,14 @@ public class Pokemon
 
     public static ushort calculateStatistic(Statistic statistic, byte species, byte level, byte IV, byte EV, Nature nature)
     {
-        PokemonData speciesData = PokemonBaseDatabase.database[species];
+        PokemonData speciesData = PokemonBaseDatabase.database[species - 1];
         ushort stat;
         byte baseStat;
+        float natureMultiplier = 1f;
 
         if (statistic == Statistic.HP)
         {
-             stat = (ushort)(((2 * speciesData.baseHP + IV + (EV / 4f) * level) / 100f) + level + 10);
+             stat = (ushort)Math.Floor((((2f * speciesData.baseHP + IV + (EV / 4f)) * level) / 100f) + level + 10);
             return stat;
         }
         else if(statistic == Statistic.Attack)
@@ -63,7 +65,12 @@ public class Pokemon
             baseStat = speciesData.baseSpeed;
         }
 
-        stat = ();
+        if (nature.buffedStat == statistic)
+            natureMultiplier = 1.1f;
+        else if (nature.debuffedStat == statistic)
+            natureMultiplier = .9f;
+
+        stat = (ushort)Math.Floor(((((2f * baseStat + IV + (EV / 4f)) * level) / 100f) + 5) * natureMultiplier);
 
         return stat;
     }
