@@ -13,6 +13,7 @@ public class Pokemon
     public byte[] types;
     //public Move[] moves;
     public ushort hP;
+    public ushort hpRemaining;
     public ushort attack;
     public ushort defense;
     public ushort specialAttack;
@@ -31,6 +32,7 @@ public class Pokemon
     public byte specialDefenseEV;
     public byte speedEV;
     //public Item heldItem;
+    public StatusCondition statusCondition;
 
     public static ushort calculateStatistic(Statistic statistic, byte species, byte level, byte IV, byte EV, Nature nature)
     {
