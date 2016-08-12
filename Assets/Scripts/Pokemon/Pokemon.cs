@@ -9,6 +9,7 @@ public class Pokemon
     public Gender gender;
     public byte level;
     public ushort trainerID;
+    public ushort secretID;
     public string oTName;
     public byte[] types;
     //public Move[] moves;
@@ -33,6 +34,71 @@ public class Pokemon
     public byte speedEV;
     //public Item heldItem;
     public StatusCondition statusCondition;
+    //public Ability ability;
+    public bool Shiny;
+
+    public Pokemon(byte species, Gender gender, byte level, byte hPIV, byte attackIV, byte defenseIV, byte specialAttackIV, byte specialDefenseIV, byte speedIV)
+    {
+        this.species = species;
+        this.gender = gender;
+        this.level = level;
+        this.hPIV = hPIV;
+        this.attackIV = attackIV;
+        this.defenseIV = defenseIV;
+        this.specialAttackIV = specialAttackIV;
+        this.specialDefenseIV = specialDefenseIV;
+    }
+
+    public static Pokemon generatePokemon(byte species, byte level)
+    {
+        System.Random random = new System.Random();
+        Byte[] bytes = new Byte[4];
+        random.NextBytes(bytes);
+        uint personality = BitConverter.ToUInt32(bytes, 0);
+
+        Pokemon pokemon;
+        Gender gender;
+        Nature nature;
+
+        if (PokemonBaseDatabase.database[species - 1].genderRatio == 255)
+            gender = Gender.Genderless;
+        else if (bytes[4] >= PokemonBaseDatabase.database[species - 1].genderRatio)
+            gender = Gender.Male;
+        else
+            gender = Gender.Female;
+        byte natureNum = (byte)(personality % 25);
+
+        if (natureNum == 0) nature = Nature.Hardy;
+        else if (natureNum == 1) nature = Nature.Lonely;
+        else if (natureNum == 2) nature = Nature.Brave;
+        else if (natureNum == 3) nature = Nature.Adamant;
+        else if (natureNum == 4) nature = Nature.Naughty;
+        else if (natureNum == 5) nature = Nature.Bold;
+        else if (natureNum == 6) nature = Nature.Docile;
+        else if (natureNum == 7) nature = Nature.Relaxed;
+        else if (natureNum == 8) nature = Nature.Impish;
+        else if (natureNum == 9) nature = Nature.Lax;
+        else if (natureNum == 10) nature = Nature.Timid;
+        else if (natureNum == 11) nature = Nature.Hasty;
+        else if (natureNum == 12) nature = Nature.Serious;
+        else if (natureNum == 13) nature = Nature.Jolly;
+        else if (natureNum == 14) nature = Nature.Naive;
+        else if (natureNum == 15) nature = Nature.Modest;
+        else if (natureNum == 16) nature = Nature.Mild;
+        else if (natureNum == 17) nature = Nature.Quiet;
+        else if (natureNum == 18) nature = Nature.Bashful;
+        else if (natureNum == 19) nature = Nature.Rash;
+        else if (natureNum == 20) nature = Nature.Calm;
+        else if (natureNum == 21) nature = Nature.Gentle;
+        else if (natureNum == 22) nature = Nature.Sassy;
+        else if (natureNum == 23) nature = Nature.Careful;
+        else nature = Nature.Quirky;
+
+        ushort firstHalf = (ushort)Math.Floor(personality / 65536.0);
+        ushort secondHalf = (ushort)(personality % 65536);
+
+        if(firstHalf == PlayerScript.trainerID)
+    }
 
     public static ushort calculateStatistic(Statistic statistic, byte species, byte level, byte IV, byte EV, Nature nature)
     {

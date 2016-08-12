@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class PlayerScript : MonoBehaviour {
 
@@ -8,12 +9,20 @@ public class PlayerScript : MonoBehaviour {
     private float movementTimer;
     private Rigidbody2D body;
 
+    public static ushort trainerID;
+    public static ushort secretID;
+
 	// Use this for initialization
 	void Start () {
         animator = GetComponent<Animator>();
         animator.SetFloat(movementStateHash, .3f);
         movementTimer = 0;
         body = GetComponent<Rigidbody2D>();
+        System.Random random = new System.Random();
+        Byte[] bytes = new Byte[4];
+        random.NextBytes(bytes);
+        trainerID = BitConverter.ToUInt16(bytes, 0);
+        secretID = BitConverter.ToUInt16(bytes, 2);
 	}
 	
 	// Update is called once per frame

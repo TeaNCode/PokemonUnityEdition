@@ -9,7 +9,7 @@ public abstract class PokemonBaseDatabase
     public static void initializeDatabase()
     {
         database = new List<PokemonData>();
-        database.Add(new PokemonData("Bulbasaur", "Seed Pokemon", 45, 49, 49, 65, 65, 45, Type.Grass, Type.Poison, 45, 64, 0, 0, 0, 1, 0, 0, 7, 5355, 70, ExperienceGroup.MediumSlow, EggGroup.Monster, EggGroup.Grass));
+        database.Add(new PokemonData("Bulbasaur", "Seed Pokemon", 45, 49, 49, 65, 65, 45, Type.Grass, Type.Poison, 45, 64, 0, 0, 0, 1, 0, 0, 31, 5355, 70, ExperienceGroup.MediumSlow, EggGroup.Monster, EggGroup.Grass));
     }
 }
 
