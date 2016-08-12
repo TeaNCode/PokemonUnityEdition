@@ -11,6 +11,7 @@ public class PlayerScript : MonoBehaviour {
 
     public static ushort trainerID;
     public static ushort secretID;
+    public static String playerName;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +24,7 @@ public class PlayerScript : MonoBehaviour {
         random.NextBytes(bytes);
         trainerID = BitConverter.ToUInt16(bytes, 0);
         secretID = BitConverter.ToUInt16(bytes, 2);
+        playerName = "Nathan";
 	}
 	
 	// Update is called once per frame
