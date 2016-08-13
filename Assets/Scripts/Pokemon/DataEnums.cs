@@ -15,3 +15,7 @@ public enum EggGroup : byte {Monster, Water1, Bug, Flying, Field,
 public enum Gender: byte {Male, Female, Genderless};
 
 public enum Statistic: byte {HP, Attack, Defense, SpecialAttack, SpecialDefense, Speed, None};
+
+public enum MoveCategory: byte {Physical, Special, Status};
+
+public enum SpecialEffect : byte {None};
