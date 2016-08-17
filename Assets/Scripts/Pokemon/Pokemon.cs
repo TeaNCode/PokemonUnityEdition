@@ -14,20 +14,20 @@ public class Pokemon
     public Type type1;
     public Type type2;
     //public Move[] moves;
-    public ushort hP;
-    public ushort hPRemaining;
+    public ushort hp;
+    public ushort hpRemaining;
     public ushort attack;
     public ushort defense;
     public ushort specialAttack;
     public ushort specialDefense;
     public ushort speed;
-    public byte hPIV;
+    public byte hpIV;
     public byte attackIV;
     public byte defenseIV;
     public byte specialAttackIV;
     public byte specialDefenseIV;
     public byte speedIV;
-    public byte hPEV;
+    public byte hpEV;
     public byte attackEV;
     public byte defenseEV;
     public byte specialAttackEV;
@@ -39,12 +39,12 @@ public class Pokemon
     public bool Shiny;
     public Nature nature;
 
-    public Pokemon(byte species, Gender gender, byte level, byte hPIV, byte attackIV, byte defenseIV, byte specialAttackIV, byte specialDefenseIV, byte speedIV, bool shiny, Nature nature)
+    public Pokemon(byte species, Gender gender, byte level, byte hpIV, byte attackIV, byte defenseIV, byte specialAttackIV, byte specialDefenseIV, byte speedIV, bool shiny, Nature nature)
     {
         this.species = species;
         this.gender = gender;
         this.level = level;
-        this.hPIV = hPIV;
+        this.hpIV = hpIV;
         this.attackIV = attackIV;
         this.defenseIV = defenseIV;
         this.specialAttackIV = specialAttackIV;
@@ -53,7 +53,7 @@ public class Pokemon
         trainerID = PlayerScript.trainerID;
         secretID = PlayerScript.secretID;
         oTName = PlayerScript.playerName;
-        hPEV = 0;
+        hpEV = 0;
         attackEV = 0;
         defenseEV = 0;
         specialAttackEV = 0;
@@ -65,8 +65,8 @@ public class Pokemon
         type2 = data.type2;
         nickname = data.speciesName;
 
-        hP = calculateStatistic(Statistic.HP, species, level, hPIV, hPEV, nature);
-        hPRemaining = hP;
+        hp = calculateStatistic(Statistic.HP, species, level, hpIV, hpEV, nature);
+        hpRemaining = hp;
         attack = calculateStatistic(Statistic.Attack, species, level, attackIV, attackEV, nature);
         defense = calculateStatistic(Statistic.Defense, species, level, defenseIV, defenseEV, nature);
         specialAttack = calculateStatistic(Statistic.SpecialAttack, species, level, specialAttackIV, specialAttackEV, nature);
@@ -84,7 +84,7 @@ public class Pokemon
         Gender gender;
         Nature nature;
         bool shiny;
-        byte hPIV;
+        byte hpIV;
         byte attackIV;
         byte defenseIV;
         byte specialAttackIV;
@@ -138,14 +138,14 @@ public class Pokemon
             shiny = false;
         }
 
-        hPIV = (byte)random.Next(32);
+        hpIV = (byte)random.Next(32);
         attackIV = (byte)random.Next(32);
         defenseIV = (byte)random.Next(32);
         specialAttackIV = (byte)random.Next(32);
         specialDefenseIV = (byte)random.Next(32);
         speedIV = (byte)random.Next(32);
 
-        return new Pokemon(species, gender, level, hPIV, attackIV, defenseIV, specialAttackIV, specialDefenseIV, speedIV, shiny, nature);
+        return new Pokemon(species, gender, level, hpIV, attackIV, defenseIV, specialAttackIV, specialDefenseIV, speedIV, shiny, nature);
     }
 
     public static ushort calculateStatistic(Statistic statistic, byte species, byte level, byte IV, byte EV, Nature nature)
