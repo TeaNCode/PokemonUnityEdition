@@ -4,8 +4,6 @@ using System.Collections;
 public class BattlePokemon
 {
     public Pokemon pokemon;
-    public sbyte hpStages;
-    public float hpMultiplier;
     public sbyte attackStages;
     public float attackMultiplier;
     public sbyte defenseStages;
@@ -32,8 +30,6 @@ public class BattlePokemon
     public BattlePokemon(Pokemon pokemon)
     {
         this.pokemon = pokemon;
-        this.hpMultiplier = 1;
-        this.hpStages = 0;
         this.attackMultiplier = 1;
         this.attackStages = 0;
         this.defenseMultiplier = 1;
@@ -52,13 +48,6 @@ public class BattlePokemon
     {
         sbyte numerator = 3;
         sbyte denominator = 3;
-        if (hpStages > 0)
-            numerator += hpStages;
-        else
-            denominator -= hpStages;
-        hp = (ushort)Mathf.Floor(pokemon.hp * hpMultiplier * numerator / denominator);
-        numerator = 3;
-        denominator = 3;
         if (attackStages > 0)
             numerator += attackStages;
         else

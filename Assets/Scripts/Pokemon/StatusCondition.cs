@@ -5,11 +5,17 @@ public class StatusCondition
 {
     public Status status;
     public byte turnsPassed;
+    public Pokemon owner;
+
+    public static readonly StatusCondition none = new StatusCondition();
+
     public StatusCondition(Status status)
     {
         this.status = status;
         turnsPassed = 0;
     }
+
+    private StatusCondition(){}
 }
 
 public enum Status : byte {Burn, Freeze, Paralysis, Poison, BadPoison, Sleep,
