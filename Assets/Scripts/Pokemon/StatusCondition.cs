@@ -24,4 +24,4 @@ public enum Status : byte {Burn, Freeze, Paralysis, Poison, BadPoison, Sleep,
     TelekeneticLevitation, Torment, Trapped, AquaRing, Bracing,
     CenterOfAttention, DefemseCurl, Glowing, Rooting, MagicCoat,
     MagneticLevitation, Minimize, Protection, Recharging, SemiInvulnerable,
-    Substitute, TakingAim, TakingSunlight, Withdrawing, WhippingWhirlwind};
+    Substitute, TakingAim, TakingSunlight, Withdrawing, WhippingWhirlwind, CritBoost};
