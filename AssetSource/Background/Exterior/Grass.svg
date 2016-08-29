@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg3484"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Grass.svg"
+   inkscape:export-filename="C:\Users\Chris\Unity\PokemonUnityEdition\AssetSource\Background\Exterior\Grass.png"
+   inkscape:export-xdpi="6.847826"
+   inkscape:export-ydpi="6.847826">
+  <defs
+     id="defs3486" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.64141302"
+     inkscape:cx="370"
+     inkscape:cy="488.5714"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3489">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#37c837"
+       id="rect3496"
+       width="1314.2889"
+       height="1314.2858"
+       x="-445.71429"
+       y="-93.352081" />
+    <rect
+       style="fill:#225500"
+       id="rect3502"
+       width="48.570999"
+       height="48.57143"
+       x="-183.67395"
+       y="179.04579" />
+    <rect
+       style="fill:#225500"
+       id="rect3502-5"
+       width="48.570999"
+       height="48.57143"
+       x="-230.8166"
+       y="131.90294" />
+    <rect
+       style="fill:#225500"
+       id="rect3502-9"
+       width="48.570999"
+       height="48.57143"
+       x="-281.2081"
+       y="180.4744" />
+    <rect
+       style="fill:#225500"
+       id="rect3502-96"
+       width="48.570999"
+       height="48.57143"
+       x="-4.0177402"
+       y="923.61957" />
+    <rect
+       style="fill:#225500"
+       id="rect3502-8"
+       width="48.570999"
+       height="48.57143"
+       x="44.313034"
+       y="876.8479" />
+    <rect
+       style="fill:#225500"
+       id="rect3502-6"
+       width="48.570999"
+       height="48.57143"
+       x="91.084785"
+       y="925.17865" />
+    <rect
+       style="fill:#225500"
+       id="rect3502-7"
+       width="48.570999"
+       height="48.57143"
+       x="596.21954"
+       y="437.19357" />
+    <rect
+       style="fill:#225500"
+       id="rect3502-0"
+       width="48.570999"
+       height="48.57143"
+       x="646.10938"
+       y="390.42181" />
+    <rect
+       style="fill:#225500"
+       id="rect3502-00"
+       width="48.570999"
+       height="48.57143"
+       x="692.8811"
+       y="435.63452" />
+  </g>
+</svg>
